@@ -25,17 +25,13 @@ public class EtcTest {
     private static final  boolean USE_LOCAL = true;
 
     @Test
-    public void testSpeakers(){
-        verify("2016/speakers");
-    }
-    @Test
     public void test2016(){
         verify("2016");
     }
 
     @Test
-    public void test2017(){
-        verify("2017");
+    public void testSpeakers(){
+    	verify("2016/speakers");
     }
 
     @Test
@@ -46,6 +42,10 @@ public class EtcTest {
     @Test
     public void test2016Topics(){
         verify("2016/topics");
+    }
+    @Test
+    public void test2017(){
+    	verify("2017");
     }
 
     private void verify(String end) {

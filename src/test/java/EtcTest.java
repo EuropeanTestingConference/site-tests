@@ -44,8 +44,16 @@ public class EtcTest {
         verify("2016/topics");
     }
     @Test
+    public void test2016Sponsorship(){
+    	verify("2016/sponsorship/");
+    }
+    @Test
     public void test2017(){
     	verify("2017");
+    }
+    @Test
+    public void test2017Sponsorship(){
+    	verify("2017/sponsorship");
     }
 
     private void verify(String end) {

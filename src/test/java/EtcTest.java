@@ -60,12 +60,16 @@ public class EtcTest {
         html = html.replaceAll("(?m)^\t+$", "\n");
         html = html.replaceAll("(?m)^ +$", "\n");
         html = html.replaceAll("\n+", "\n");
-//        html = html.replaceAll("/snippets/2016/", "/");
+        html = customNormalizations(html);
+        return html;
+    }
+	private String customNormalizations(String html) {
+//		html = html.replaceAll("/snippets/2016/", "/");
 //        html = html.replaceAll("fix-anchor\" id=\"", "fix-anchor\" id=\"/speakers/");
 //        html = html.replaceAll("class=\"topic\" id=\"", "class=\"topic\" id=\"/topics/");
 //        html = html.replaceAll("a href=\"/speakers#", "a href=\"/speakers#/topics/");
-        return html;
-    }
+		return html;
+	}
 
     private void verifyPage(String response) {
         Approvals.verifyHtml(response);
